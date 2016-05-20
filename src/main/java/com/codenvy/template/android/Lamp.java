@@ -6,7 +6,7 @@ import android.graphics.Paint;
 
 public class Lamp  extends Thread
 {
-  private Canvas canvas  = new Canvas();
+  private Canvas canvas;
   private Paint  black   = new Paint();
   private Paint  white   = new Paint();
   String name;
@@ -32,8 +32,9 @@ public class Lamp  extends Thread
          }
    }
   
-  public Lamp(String name, int x, int y)     // CONSTRUCTOR
+  public Lamp(Canvas canvas, String name, int x, int y)     // CONSTRUCTOR
   {
+    	this.canvas = canvas;
     	this.name 	= name;
     	this.x		= x;    	this.y		= y;
     	white.setColor(Color.WHITE);    	black.setColor(Color.BLACK);

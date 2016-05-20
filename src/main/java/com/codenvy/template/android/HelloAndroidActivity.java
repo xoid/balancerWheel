@@ -17,7 +17,7 @@ public class HelloAndroidActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-      	server = new Server();
+      	//server = new Server();
          setContentView(new myView(this));
     }
 
