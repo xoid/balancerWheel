@@ -6,8 +6,8 @@ import android.view.View;
 
 public class myView extends View
 {
-   Canvas canvas ;
-  	Lamp [] lamps = new Lamp[7];
+   public Canvas canvas ;
+  	public Lamp [] lamps = new Lamp[7];
   	
    public myView(Context context) 
    {

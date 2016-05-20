@@ -3,9 +3,12 @@ package com.codenvy.template.android;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.graphics.Paint;
+import android.graphics.Color;
 
 public class HelloAndroidActivity extends Activity {
   		Server server;
+  		myView myview;
     /**
      * Called when the activity is first created.
      *
@@ -18,7 +21,9 @@ public class HelloAndroidActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
       	//server = new Server();
-         setContentView(new myView(this));
+      	myview = new myView(this);
+         setContentView(myview);
+      	myview.canvas.drawRect(200, 200, 400, 400, new Paint(Color.RED));
     }
 
     @Override
