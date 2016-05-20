@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 
 public class HelloAndroidActivity extends Activity {
-
+  		Server server;
     /**
      * Called when the activity is first created.
      *
@@ -17,7 +17,8 @@ public class HelloAndroidActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+      	server = new Server();
+         setContentView(new myView(this));
     }
 
     @Override
